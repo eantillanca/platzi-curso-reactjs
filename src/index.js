@@ -5,12 +5,22 @@
 
 // container.appendChild(element);
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const element = <h1>Hello, Platzi Badges eantillanca!</h1>;
+const person = {
+    name : 'Erik Antillanca',
+    profession: 'Ingeniero civil en informática'
+}
 
-const container = document.getElementById('app');
+const jsx = (
+    <div>
+        <h1>Hola! soy {person.name}</h1>
+        <p>{person.profession}</p>
+    </div>
+) 
+
+const container = document.getElementById("app");
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(element, container);
+ReactDOM.render(jsx, container);
