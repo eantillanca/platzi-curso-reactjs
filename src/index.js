@@ -1,26 +1,20 @@
-// const element = document.createElement('h1');
-// element.innerText = 'Hello, Platzi Badges!';
-
-// const container = document.getElementById('app');
-
-// container.appendChild(element);
-
 import React from "react";
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
-const person = {
-    name : 'Erik Antillanca',
-    profession: 'Ingeniero civil en informática'
-}
-
-const jsx = (
-    <div>
-        <h1>Hola! soy {person.name}</h1>
-        <p>{person.profession}</p>
-    </div>
-) 
+import "./global.css";
+import Badge from "./components/Badge";
 
 const container = document.getElementById("app");
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(jsx, container);
+ReactDOM.render(
+	<Badge
+        fistname="Erik"
+        avatarUrl="https://st2.depositphotos.com/1007566/12375/v/950/depositphotos_123753800-stock-illustration-avatar-man-cartoon.jpg"
+		lastname="Antillanca"
+		jobTitle="Computer Engineer"
+		twitter="eantillanca"
+	/>,
+	container
+);
