@@ -3,12 +3,14 @@ import React from "react";
 class BadgeForm extends React.Component {
 	state = {};
 
+	/*
 	handleChange = e => {
 		//console.log({ name: e.target.name, value: e.target.value });
 		this.setState({
 			[e.target.name]: e.target.value
 		});
-	};
+    };
+    */
 
 	handleSubmit = e => {
 		e.preventDefault();
@@ -29,8 +31,8 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							name="first_name"
 							id="first_name"
-							onChange={this.handleChange}
-							value={this.state.first_name}
+							onChange={this.props.onChange}
+							value={this.props.formValues.first_name}
 						/>
 
 						<label htmlFor="last_name">Last Name</label>
@@ -39,8 +41,8 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							name="last_name"
 							id="last_name"
-							onChange={this.handleChange}
-							value={this.state.last_name}
+							onChange={this.props.onChange}
+							value={this.props.formValues.last_name}
 						/>
 
 						<label htmlFor="email">Email</label>
@@ -49,8 +51,8 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							name="email"
 							id="email"
-							onChange={this.handleChange}
-							value={this.state.email}
+							onChange={this.props.onChange}
+							value={this.props.formValues.email}
 						/>
 
 						<label htmlFor="twitter">Twitter</label>
@@ -59,8 +61,8 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							name="twitter"
 							id="twitter"
-							onChange={this.handleChange}
-							value={this.state.twitter}
+							onChange={this.props.onChange}
+							value={this.props.formValues.twitter}
 						/>
 
 						<label htmlFor="job_title">Job Title</label>
@@ -69,8 +71,8 @@ class BadgeForm extends React.Component {
 							className="form-control"
 							name="job_title"
 							id="job_title"
-							onChange={this.handleChange}
-							value={this.state.job_title}
+							onChange={this.props.onChange}
+							value={this.props.formValues.job_title}
 						/>
 
 						<button className="btn btn-primary">Save</button>
